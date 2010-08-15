@@ -6,6 +6,8 @@ class User < Mongomatic::Base
   
 end
 
+mongomatic Mongo::Connection.new.db("test2")
+
 get '/create/:name' do
   User.new(:name => params[:name]).insert
   "ok"
