@@ -2,8 +2,6 @@ $: << File.join(File.dirname(__FILE__), %w/.. lib/)
 require 'sinatra'
 require 'sinatra/mongomatic'
 
-mongomatic nil
-
 class User < Mongomatic::Base
   
 end

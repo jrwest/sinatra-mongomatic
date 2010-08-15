@@ -8,8 +8,6 @@ end
 class MongomaticExample < Sinatra::Base
   register Sinatra::Mongomatic
   
-  mongomatic nil
-  
   get '/create/:name' do
     User.new(:name => params[:name]).insert
     "ok"
